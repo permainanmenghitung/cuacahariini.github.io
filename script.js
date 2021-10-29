@@ -42,12 +42,12 @@ function onError(error){
 }
 
 function fetchData(){
-    infoTxt.innerText = "Getting weather details...";
+    infoTxt.innerText = "Mendapatkan detail cuaca...";
     infoTxt.classList.add("pending");
     // getting api response and returning it with parsing into js obj and in another 
     // then function calling weatherDetails function with passing api result as an argument
     fetch(api).then(res => res.json()).then(result => weatherDetails(result)).catch(() =>{
-        infoTxt.innerText = "Something went wrong";
+        infoTxt.innerText = "Ada yang salah";
         infoTxt.classList.replace("pending", "error");
     });
 }
